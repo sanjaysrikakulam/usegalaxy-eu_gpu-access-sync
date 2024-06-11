@@ -69,7 +69,7 @@ def add_users():
             gpu_role = item
             break
     # add approved users to correct group and role
-    gc.update_group(group_id=gpu_group["id"], user_ids=l_user_ids, role_ids=[gpu_role[1]["id"]])
+    gc.update_group(group_id=gpu_group["id"], group_name=gpu_access_group, user_ids=l_user_ids, role_ids=[gpu_role[1]["id"]])
 
 
 add_users()
